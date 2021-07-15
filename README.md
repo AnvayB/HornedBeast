@@ -31,3 +31,15 @@ Start time: 6:30pm
 Finish time: 11:30pm
 
 Actual time needed to complete: 5 hrs
+
+---
+
+Number and name of feature: Feature 4: Display a Model
+
+Estimate of time needed to complete: 3 hrs
+
+Start time: 3:00pm
+
+Finish time: 11:30pm
+
+Actual time needed to complete: 8.5 hrs

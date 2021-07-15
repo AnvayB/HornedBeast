@@ -1,26 +1,13 @@
 import React from 'react';
-import data from './data.json';
+import heart from './heart.png'
+import Card from 'react-bootstrap/Card';
 
 class HornedBeasts extends React.Component {
-  // render () {
-  //   return (
-  //     <div>
-  //       <h2>
-  //         {this.props.title}
-  //       </h2>
-  //       <img src = {this.props.image_src} alt = {this.props.image_alt} title = {this.props.image_title}></img>
-  //       <p>
-  //         {this.props.description}
-  //       </p>
-  //     </div>
-  //   );
-  // }
 
   constructor(props){
     super(props);
     this.state = {
       favoriteClicks: 0,
-      data: data
     };
   }
 
@@ -29,13 +16,26 @@ class HornedBeasts extends React.Component {
     this.setState({favoriteClicks: this.state.favoriteClicks + 1});
   }
 
-  render() {
-    console.log("Current data: " + this.state.data);
+  render () {
     return (
-      <>
-        <h1>{this.props.title}</h1>
-      </>
-    );
+      // <>
+      //   <h2>{this.props.title}</h2>
+      //   <p>{this.props.description}</p>
+      //   <img src = {heart} alt = 'red heart png'/>
+      //   <span>Favorites: {this.state.favoriteClicks}</span>
+      // </>
+
+      <Card>
+        <Card.Img variant='top' src={this.props.image_url} alt = "" onClick={this.fav}/>
+        <Card.Body>
+          <Card.Img variant='top' src={heart} onClick={this.fav}/>
+          <Card.Title>{this.props.title}</Card.Title>
+          <Card.Text>{this.props.description}</Card.Text>
+          <Card.Text>Favorites: {this.state.favoriteClicks}</Card.Text>
+        </Card.Body>
+      </Card>
+
+    )
   }
 }
 export default HornedBeasts;
