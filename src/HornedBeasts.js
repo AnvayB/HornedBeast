@@ -18,20 +18,13 @@ class HornedBeasts extends React.Component {
 
   render () {
     return (
-      // <>
-      //   <h2>{this.props.title}</h2>
-      //   <p>{this.props.description}</p>
-      //   <img src = {heart} alt = 'red heart png'/>
-      //   <span>Favorites: {this.state.favoriteClicks}</span>
-      // </>
 
-      <Card>
-        <Card.Img variant='top' src={this.props.image_url} alt = "" onClick={this.fav}/>
+      <Card onClick={this.fav}>
+        <Card.Img variant='top' src={this.props.src} alt = "" onClick={this.fav}/>
         <Card.Body>
-          <Card.Img variant='top' src={heart} onClick={this.fav}/>
           <Card.Title>{this.props.title}</Card.Title>
+          <Card.Text>{heart} = {this.state.favoriteClicks} favorites</Card.Text>
           <Card.Text>{this.props.description}</Card.Text>
-          <Card.Text>Favorites: {this.state.favoriteClicks}</Card.Text>
         </Card.Body>
       </Card>
 
